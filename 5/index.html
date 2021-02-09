@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index 5 лаба 8 вариант</title>
+    <style>
+        fieldset
+        {
+            border: none
+        }
+        select
+        {
+            margin: 5px
+        }
+    </style>
+</head>
+<body>
+    <h2>Sign up</h2>
+    <form id="form1">
+        <fieldset>
+            <label for="firstName"> First name:</label>
+            <br>
+            <input type="text" id="firstName" name="firstName" size="30" maxlength="20" tabindex="2" placeholder="Ivan">
+        </fieldset>
+        <fieldset>
+            <label for="lastName"> Last name:</label>
+            <br>
+            <input type="text" id="lastName" name="lastName" size="30" maxlength="20" tabindex="1" placeholder="Ivanov">
+            <br>
+        </fieldset>
+        <fieldset>
+            <label for="password">Password:</label>
+            <br>
+            <input type="password" id="password" name="password" tabindex="10">
+        </fieldset>
+        <fieldset>
+            <label for="country">Country:</label>
+        <select name="country" id="country" tabindex="4">
+            <option value="USA">USA</option>
+            <option value="Russia">Russia</option>
+            <option value="Belarus">Belarus</option>
+            <option value="Japan">Japan</option>
+        </select>
+        </fieldset>
+        <fieldset>
+            <label for="birthday">Birthday:</label>
+            <input type="date" id="birthday" name="birthday" tabindex="5">
+        </fieldset>
+        <fieldset>
+            <span>Gender:</span>
+            <input type="radio" id="man" name="gender" value="man" tabindex="6">
+            <label for="man">man</label>
+            <input type="radio" id="women" name="gender" value="women">
+            <label for="women">women</label>
+        </fieldset>
+        <fieldset>
+            <span>Interests:</span>
+            <input type="checkbox" id="val1" name="val1" value="RPG" tabindex="7">
+            <label for="val1">RPG</label>
+            <input type="checkbox" id="val2" name="val2" value="Platform">
+            <label for="val2">Platform</label>
+            <input type="checkbox" id="val3" name="val3" value="Shoter">
+            <label for="val3">Shooter</label>
+        </fieldset> 
+        <fieldset>
+            <label for="search">Search Games:</label>
+            <input type="search" id="search" name="search" tabindex="8">
+            <input type="submit" value="Search">
+        </fieldset>
+        <fieldset>
+            <span>Comment</span>
+            <br>
+            <textarea name="comment" id="" cols="30" rows="10" placeholder="Comment" tabindex="9"></textarea>
+        </fieldset>
+        <fieldset>
+            <input type="image" src="files/Gico.ico" width="20" height="20" tabindex="3">
+        </fieldset>
+        <fieldset>
+            <input type="reset" value="Clear"tabindex="11">
+            <input type="submit" value="Submit" tabindex="12">
+        </fieldset>
+    </form>
+    <input type="text" id="in1" name="in1" form="form1">
+    <h2>Computer games</h2>
+    <form action="">
+        <fieldset>
+            <label for="typeG">Type Games:</label>
+            <select name="typeG" id="typeG" tabindex="13">
+                <option value="All">All</option>
+                <option value="RPG">RPG</option>
+                <option value="Platform">Platform</option>
+                <option value="Shooter">Shooter</option>
+            </select>
+        </fieldset>
+        <fieldset>
+            <label for="cost">Game cost (0-100):</label>
+            <input type="range" id="cost" name="cost" min="0" max="100" tabindex="14">
+        </fieldset>
+        <fieldset>
+            <span>Additionally:</span>
+            <input type="checkbox" id="stock" name="stock" value="Stock" tabindex="15">
+            <label for="stock">Stock</label>
+        </fieldset>
+        <fieldset>
+            <label for="search">Search Games:</label>
+            <input type="search" id="search" name="search" tabindex="16">
+            <input type="submit" value="Search">
+        </fieldset>
+    </form>
+</body>
+</html>

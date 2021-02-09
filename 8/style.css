@@ -1,0 +1,80 @@
+body{
+    overflow: auto;
+}
+h2{
+    font-size: 20px;
+    font-style: Oswald;
+}
+p{
+    line-height:2px;
+}
+.blockLab{
+    width: 459px;
+    height: 545px;
+    background: rgb(24, 224, 88);
+    display: block;
+    border: yellow solid 5px;
+}
+img{
+    width: 300px;
+    height: 400px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+.backGreenDel{
+    background-color: chartreuse;
+    text-decoration: line-through;
+    margin-left: 5px;
+    padding-bottom: 7px;
+}
+#textSub{
+    vertical-align: sub;
+    font-size: 11px;
+    background-color: chartreuse;
+    padding-top: 2px;
+    padding-bottom: 4px;
+}
+.backGreen{
+    background-color: chartreuse;
+    padding-bottom: 7px;
+}
+#backGreenStr3{
+    background-color: chartreuse;
+    margin-left: 5px;
+    padding-bottom: 4px;
+}
+#backGreenStr4{
+    background-color: chartreuse;
+    margin-left: 5px;
+    padding-bottom: 2px;
+    padding-top: 1px;
+}
+#backGreenStr5{
+    background-color: chartreuse;
+    margin-left: 22px;
+    padding-bottom: 1px;
+}
+#backGreenStr6{
+    background-color: chartreuse;
+    margin-left: 40px;
+}
+#backGreenStr7{
+    background-color: chartreuse;
+    margin-left: 185px;
+    background-color: darkcyan;
+    text-decoration: underline;
+}
+.textbackDarkGreen{
+    background-color: darkcyan;
+    text-decoration: underline;
+    padding-bottom: 1px;
+}
+#textSup{
+    vertical-align: super; 
+    font-size: 11px;
+    background-color: chartreuse;
+}
+#textBig{ 
+    font-size: 20px;
+}

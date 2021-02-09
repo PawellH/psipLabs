@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 16 index</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="./script.js"></script>
+</head>
+<body>
+    <table>
+        <tr class="cl1">
+            <td id="item1" onmouseover="ex4_1(this)" onmouseout="ex4_2(this)"><span>Элемент 1</span></td>
+            <td id="item2" ondblclick="ex5(this)"><span>Элемент 2</span></td>
+            <td id="item3" onclick="ex6(this)"><span>Элемент 3</span></td>
+            <td id="item4" onmouseover="ex7(this)"><span>Элемент 4</span></td>
+            <td id="item5" ondblclick="ex8(this)"><span>Элемент 5</span></td>
+            <td id="item6" onclick="ex9(this)"><span>Элемент 6</span></td>
+        </tr>
+    </table>
+    <br>
+    <!-- event - передает объект события, которое сработало и изнего можно достать различную инфу -->
+    <div onclick="addValue(event)">
+        <button class="button-number">1</button>
+        <button class="button-number">2</button>
+        <button class="button-number">3</button>
+        <button class="button-number">4</button>
+        <button class="button-number">5</button>
+    </div>
+    <br>
+    <button class="button-result" onclick="displayResult()">Результат</button>
+    <br>
+    <br>
+    <button onmousedown="ex11()">Приветствие</button>
+    <p id="name"></p>
+    <p class="text" onmouseover="enlargeFontSize(this)" onclick="setInitialFontSize(this)">Я, Гончаров Павел Владимирович, учусь работать с JavaScript </p>
+</body>
+</html>

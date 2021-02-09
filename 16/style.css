@@ -1,0 +1,40 @@
+table{
+    border: black double 1px;
+    border-collapse: collapse;
+}
+td{
+    border: black solid 1px;
+}
+span{
+    margin: 0px 5px;
+}
+/* ------------------------------------------------------------------
+    классы
+--------------------------------------------------------------------*/
+
+.text {
+    font-size: 13px;
+}
+.cl1{
+    color: blue;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 12px;
+}
+.cl2{
+    color: red;
+    font-weight: bold;
+}
+.cl3{
+    color: green;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+}
+.cl4{
+    color: black;
+    border: 2px dotted red;
+}
+.cl5{
+    color: blue;
+    font-weight: bold;
+    font-style: italic;
+}

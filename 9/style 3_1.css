@@ -1,0 +1,20 @@
+.block{
+    float: left;
+    width: calc(100%/3);
+    min-height: 100vh;
+}
+#blue{
+    background-color: skyblue;
+}
+#green{
+    background-color: darkkhaki;
+}
+#red{
+    background-color: indianred;
+}
+hr{
+    border: none;
+    background-color: black;
+    height: 0.1px;
+    width: 80%;
+}

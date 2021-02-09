@@ -1,0 +1,40 @@
+body{
+    height: 100vh;
+    font-weight: bold;
+}
+header{
+    background-color: green;
+    height: 10%;
+}
+aside{
+    background-color:white;
+}
+article{
+    background-color: limegreen;
+    height: 70%;
+    border-top:10px solid limegreen;
+    border-bottom: 20px solid limegreen;
+}
+#menu{
+    width: 30%;
+    padding-top: 10px;
+}
+footer{
+    background-color: red;
+    height: 5%;
+}
+#greyBlock{
+    background-color: lightgrey;
+    width: 70%;
+    height: 100%;
+    padding-top: 10px;
+}
+.bFlex{
+    display: flex;
+    flex-direction: row;
+}
+.divCa{
+    background-color: limegreen;
+    height: 1.5%;
+}
+

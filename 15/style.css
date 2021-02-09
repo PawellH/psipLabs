@@ -1,0 +1,211 @@
+/*-----------------------------------------------------------------------------------------------------------------
+    Задание 1 (часть 1)    
+-----------------------------------------------------------------------------------------------------------------*/
+#ex1{
+    width: 200px;
+    height: 50px;
+    background-color: black;
+    border: solid 5px black;
+}
+#ex1-c{
+    width: 10px;
+    height: 50px;
+    background-color:lawngreen;
+}
+#ex1-c:hover{
+    animation: anim1 linear 2s;
+}
+@keyframes anim1{
+    from{
+    }
+    to{
+        width: 200px;
+        height: 50px;
+        background-color: lawngreen;
+    }
+}
+/*-----------------------------------------------------------------------------------------------------------------
+    Задание 1 (часть 2)    
+-----------------------------------------------------------------------------------------------------------------*/
+#ex-c2{
+    border: 4px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 4px solid #3498db;
+    width: 30px;
+    height: 30px;
+}
+#ex-c2:hover{
+    animation: anim1-2 2s linear infinite;
+}
+@keyframes anim1-2 {
+    from{ transform: rotate(0deg); }
+    to{ transform: rotate(360deg); }
+}
+/*-----------------------------------------------------------------------------------------------------------------
+    Задание 2    
+-----------------------------------------------------------------------------------------------------------------*/
+#ex2{
+    background-color: black;
+    width: 200px;
+    height: 200px;
+    position: relative;
+    animation: anim2_square 5s linear infinite;
+}
+@keyframes anim2_square {
+    from{  
+        background-color: black;
+    }
+    to{ 
+        background-color: green;
+    }
+}
+#circle{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    top: 5px;
+    left: 90px;
+    animation: anim2_circle 5s linear infinite;
+}
+@keyframes anim2_circle {
+    0%{  
+        top: 5px;
+        left: 90px;
+    }
+    10%{ 
+        top: 5px; 
+        left: 175px;
+    }
+    25%{  
+        top: 175px;
+        left: 175px;
+    }
+    50%{  
+        top: 175px;
+        left: 5px;
+    }
+    75%{ 
+        top: 5px;
+        left: 5px;
+    }
+    100%{  
+        top: 5px;
+        left: 90px;
+    }
+}
+/*-----------------------------------------------------------------------------------------------------------------
+    Задание 3    
+-----------------------------------------------------------------------------------------------------------------*/
+#ex3{
+    background-color: black;
+    width: 500px;
+    height: 30px;
+    padding: 1% 1%;
+    transform-origin: 100% 0;
+}
+#ex3:hover{
+    animation: anim3_ref 5s linear forwards;
+}
+@keyframes anim3_ref{
+    to{ transform: rotate(360deg);
+        font-size: 25px;     
+    }
+}
+#text-a1{
+    color: red;    
+}
+#text-a2{
+    color: skyblue;    
+}
+#text-a3{
+    color: yellow;    
+}
+#text-a4{
+    color: green;    
+}
+#text-a5{
+    color: purple;    
+}
+.span1{
+    color: white;
+}
+
+#box{
+    display: inline-block;
+    transition: 1s;
+    transform-origin: 100% 0;
+}
+#box-cover{
+    width: 150px;
+    height: 20px;
+    background-color: indigo;
+    border: 3px solid hotpink;
+    color: transparent;
+    position: relative;
+}
+#box-cover:hover{
+    animation: anim3_box-cover 0.1s linear forwards;
+}
+@keyframes anim3_box-cover {
+    from{     
+        color: transparent;
+    }
+    to{ 
+        margin-bottom: 20px;
+        color:black;
+    }
+}
+#box-cover:hover > span{
+    display: block;
+    position: absolute;
+    bottom: -20px;
+    left: 25px;
+}
+#box-base{
+    width: 150px;
+    height: 100px;
+    background-color: indigo;
+    border: 3px solid hotpink;
+}
+/*-----------------------------------------------------------------------------------------------------------------
+    Задание 4   
+-----------------------------------------------------------------------------------------------------------------*/
+#ex4{
+    background-color: rgb(16, 23, 65);
+    width: 70px;
+    height: 200px;
+    position: relative;
+}
+.div-s{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    animation: anim4 2s linear infinite;
+}
+#ex4-s2{
+    margin-left: 20px;
+}
+#ex4-s3{
+    margin-left: 40px;    
+}
+.snowflakes{
+    width: 20px;
+    height: 20px;
+}
+@keyframes anim4 {
+    from{  
+        top: 5px;
+        left: 5px;
+    }
+    25%{
+        left: 15px;
+    }
+    to{  
+        top: 175px;
+        left: 5px;
+    }
+}
