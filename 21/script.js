@@ -14,12 +14,17 @@ function getMonthNames() {
 console.log(`Задание №1: ${getMonthNames().join(", ")}`);
 
 //2 Вывод возраста по введенной дате рождения
-function getAge(birthday) {
-  var ageMs = Date.now() - birthday.getTime();
-  var ageDate = new Date(ageMs);
-  return Math.abs(ageDate.getUTCFullYear() - 1970);
+function getAge(dateString) {
+  const today = new Date();
+  const birthDate = new Date(dateString);
+  let age = today.getFullYear() - birthDate.getFullYear();
+  const monthsDifference = today.getMonth() - birthDate.getMonth();
+  if (monthsDifference < 0 || (monthsDifference === 0 && today.getDate() < birthDate.getDate())) {
+    age--;
+  }
+  return age;
 }
-console.log(`Задание №2: ${getAge(new Date("1940-06-26"))}`);
+console.log(`Задание №2: ${getAge("2000-02-17")}`);
 
 //3 кнопки: вывод промежутка времени между кликами
 let startTime;
@@ -50,7 +55,7 @@ console.log(`Задание №4 часть 1: Растояние между т�
 //4 часть 2 вариант 3: конвертация всех символов введенной строки в верхний регистр. Возвращение исходной и конвертированной строки
 function getUppercaseStr(str) {
   const strUpper = str.toUpperCase();
-  return console.log(`Задание №4 часть 2: исходняя строка: ${str}, полученная: ${strUpper}`);
+  console.log(`Задание №4 часть 2: исходняя строка: ${str}, полученная: ${strUpper}`);
 }
 const str1 = "строка4";
 getUppercaseStr(str1);
@@ -62,12 +67,4 @@ Number.prototype.isOdd = function() {
 const n = 7;
 console.log(`Задание №5: ${n.isOdd()}`);
 
-//6 функция, получающая в качестве параметра переменную содержащую строку и с помощью регулярного выражения проверяет,
-//начинается ли содержимое этой переменной с цифры или нет.
-const str2 ="1ex";
-function exersice6(str) {
-  if(/^\d/.test(str)) return console.log(`Задание 6: строка "${str}" начинается с цифры`)
-  else return console.log(`Задание 6: строка "${str}" не начинается с цифры`);
-}
-exersice6(str2);
 
