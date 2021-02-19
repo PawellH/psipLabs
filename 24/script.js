@@ -1,29 +1,8 @@
-let resultElement = null;
-let eventNames = [];
-
-function checkIsElementsChild(node) {
-  return node?.parentNode.id === "elements";
-}
-
-function addElementBorder(event) {
-  const { target } = event;
-  event.stopPropagation();
-  if (checkIsElementsChild(target)) {
-    target.style.border = "1px solid red";
-    target.style.cursor = "pointer";
-  }
-}
-
-function removeElementBorder(event) {
-    const { target } = event;
-    if (checkIsElementsChild(target)) {
-      target.style.border = "";
-      target.style.cursor = "";
-    }
-}
-
 window.onload = function() {
+  //часть Задания 1
   resultElement = document.querySelector("#result");
+  
+  //часть Задания 2  
   const link = document.querySelector("#link");
   link.addEventListener("click", () => {
     console.log("link click");
@@ -42,18 +21,32 @@ window.onload = function() {
   });
 }
 
-function addEvent() {
-  eventNames = prompt("Event names:").split(",").map(eventName => {
+//Задание 1
+let resultElement = null;
+function task1(element) {
+  resultElement.innerHTML = element.value;
+}
+
+//Задание 2
+function task2(event) {
+  event.preventDefault();
+}
+
+//Задание 3
+let eventNames = [];
+function task3() {
+  eventNames = prompt("Введите имя события").split(",").map(eventName => {
     return eventName.trim();
   })
-  alert("Choose element");
+  alert("Выберите элемент");
   const elements = document.querySelector("#elements");
   elements.addEventListener("mouseover", addElementBorder);
   elements.addEventListener("mouseout", removeElementBorder, { capture: true });
+  
   const removeElementsEventListeners = (event) => {
     const { target } = event;
     if (checkIsElementsChild(target)) {
-      alert("Element was chosen");
+      alert("Элемент выбран");
       removeElementBorder(event);
       eventNames.forEach(eventName => {
         target.addEventListener(eventName, () => {
@@ -66,11 +59,28 @@ function addEvent() {
   }
   elements.addEventListener("click", removeElementsEventListeners, { once: true });
 }
-
-function writeText(element) {
-  resultElement.innerHTML = element.value;
+function checkIsElementsChild(node) {
+  return node?.parentNode.id === "elements";
+}
+function addElementBorder(event) {
+  const { target } = event;
+  event.stopPropagation();
+  if (checkIsElementsChild(target)) {
+    target.style.border = "2px solid black";
+    target.style.backgroundColor = "skyblue";
+    target.style.cursor = "pointer";
+    target.style.width = "100px";
+  }
+}
+function removeElementBorder(event) {
+  const { target } = event;
+  if (checkIsElementsChild(target)) {
+    target.style.border = "";
+    target.style.backgroundColor = "";
+    target.style.cursor = "";
+    target.style.width = "";
+  }
 }
 
-function task2(event) {
-  event.preventDefault();
-}
+
+

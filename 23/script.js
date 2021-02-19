@@ -1,5 +1,7 @@
+
 window.onload = function () {
   // Задание 1
+  debugger;
   div1.innerHTML = [...document.body.childNodes].map(childNode => {
     return childNode;
   });
@@ -62,17 +64,27 @@ window.onload = function () {
 
 // Задание 2
 function addDaysOfWeek() {
-  document.getElementById("list").innerHTML += `<li>
-    <ul>
-      <li>понедельник</li>
-      <li>вторник</li>
-      <li>среда</li>
-      <li>четверг</li>
-      <li>пятница</li>
-      <li>суббота</li>
-      <li>воскресенье</li>
-    </ul>
-  </li>`;
+    //часть задания 2
+    const listContainer = document.getElementById("list");
+    const li1 = document.createElement("li");
+    li1.innerHTML = "понедельник";
+    const li2 = document.createElement("li");
+    li2.innerHTML = "вторник";
+    const li3 = document.createElement("li");
+    li3.innerHTML = "среда";
+    const li4 = document.createElement("li");
+    li4.innerHTML = "четверг";
+    const li5 = document.createElement("li");
+    li5.innerHTML = "пятница";
+    const li6 = document.createElement("li");
+    li6.innerHTML = "суббота";
+    const li7 = document.createElement("li");
+    li7.innerHTML = "воскресенье";
+    const ul = document.createElement("ul");
+    appendChildren([li1, li2, li3, li4, li5, li6, li7], ul);
+    const li = document.createElement("li");
+    li.appendChild(ul);
+    listContainer.appendChild(li);
 }
 
 //Задание 3
@@ -105,6 +117,7 @@ function buildTable(data) {
   table.appendChild(tbody);
   return table;
 }
+
 function appendChildren(children, parent) {
   children.forEach(child => {
     parent.appendChild(child);
