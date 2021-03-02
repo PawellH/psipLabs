@@ -1,71 +1,66 @@
-class Zoo {
-  static pets = new Set();
+class ZooPet {
+  static zooPets = [];
   constructor(name, age, sound) {
     this.name = name;
     this.age = age;
     this.sound = sound;
-    this.addPet();
+    this.addZooPet();
   }
-  
-  makeSound() {
-    console.log(`${this.name} (возраст: ${this.age}) звук: ${this.sound}`)
+
+  addZooPet() {
+    ZooPet.zooPets.push(this);
   }
-  addPet() {
-    Zoo.pets.add(this);
+  showZooPetInfo() {
+    console.log(`${this.name}(${this.age}): ${this.sound}`)
   }
-  static getPetsNumberByType() {
-    const petsNumberByType = {};
-    this.pets.forEach(pet => {
-      const existingPetNumberByType = petsNumberByType[pet.constructor.name];
-      if (!existingPetNumberByType) {
-        petsNumberByType[pet.constructor.name] = 1;
-      } else {
-        petsNumberByType[pet.constructor.name] = existingPetNumberByType + 1; 
-      }
+  static getNumberZooPetsByType() {
+    const numberZooPetsByType = {};
+    this.zooPets.forEach(zooPet => {
+      const existingNumberZooPetByType = numberZooPetsByType[zooPet.constructor.name];
+      numberZooPetsByType[zooPet.constructor.name] = existingNumberZooPetByType ? existingNumberZooPetByType + 1 : 1;
     });
-    return petsNumberByType;
+    return numberZooPetsByType;
   }
 }
   
-class Animal extends Zoo {
-  constructor(name, age, children, isMale, isPredator, sound) {
+class Animal extends ZooPet {
+  constructor(name, age, sound, children, isMale) {
     super(name, age, sound);
     this.children = children;
     this.isMale = isMale;
-    this.isPredator = isPredator;
-    this.addPet();
   }
 }
 
 class Mammal extends Animal {
   constructor(
-    name, age, children, isMale, isPredator,
-    sound, woolColor, milkColor, numberOfEyes,
+    name, age, sound, children, isMale,
+    woolColor
   ) {
-    super(name, age, children, isMale, isPredator, sound);
-    this.woolColor = woolColor;
-    this.milkColor = milkColor;
-    this.numberOfEyes = numberOfEyes;
-    this.addPet();
+    super(name, age, sound, children, isMale);
+    this.woolColor = woolColor;  
   }
 }
   
 class Bird extends Animal {
-  constructor(name, age, children, isMale, isPredator, sound, feathersColor) {
-    super(name, age, children, isMale, isPredator, sound)
+  constructor(name, age, sound, children, isMale,
+    feathersColor
+  ) {
+    super(name, age, sound, children, isMale);
     this.feathersColor = feathersColor;
-    this.addPet()
   }
 }
   
-const miniPig = new Animal("miniPig", 1, [], true, false, "хрью-хрью");
-const dadPig = new Animal("dadPig", 7, [miniPig], true, false, "хрю-хрю");
-const mumPig = new Animal("mumPig", 6, [miniPig], false, false, "хрюки-хрюки");
+const seaUrchin = new Animal("Ежик", 20, "иии", [], true);
 
-const lynx = new Mammal("lynx", 3, [], true, true, "рp", "серый", "белый", 2);
-const wolf = new Mammal("wolf", 6, [], true, true, "ау", "серый", "серый", 2);
+const childLion = new Mammal("Симба", 1, "рь-pь-рь", [], true, "оранжевый");
+const dadLion = new Mammal("Муфаса", 8, "рpр-ррр", [childLion], true, "оранжевый");
+const mumLion = new Mammal("Сараби", 8, "рpр", [childLion], false, "оранжевый");
 
-const bird = new Bird("голубь", 3, [], true, false, "гуру-гуру", "серый");
+const penguin1 = new Bird("Шкипер", 7, "Улыбаемся и машем, парни.", [], true, "черно-белый");
+const penguin2 = new Bird("Ковальски", 7, "Не стоит недооценивать простую силу пингвиньей неотразимости.", [], true, "черно-белый");
+const penguin3 = new Bird("Рико", 7, "Кабум! Кабум! Кабум!", [], true, "черно-белый");
+const penguin4 = new Bird("Шкипер", 5, "Меня запеченькали!", [], true, "черно-белый");
 
-console.log(Zoo.pets);
-console.log(Zoo.getPetsNumberByType());
+penguin1.showZooPetInfo();
+console.log(ZooPet.zooPets);
+console.log(ZooPet.getNumberZooPetsByType());
