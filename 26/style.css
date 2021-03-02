@@ -1,0 +1,20 @@
+#div1 label {
+  color: blue
+}
+#divImg{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#divImg img{
+  width: 300px;
+  height: 250px;
+  margin: 20px 20px;
+}
+#textDiv{
+  border-radius: 5px;
+  padding: 10px 10px;
+  margin: 20px 90px;
+  border: 2px solid purple;
+}
+

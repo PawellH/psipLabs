@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lab 26</title>
+  <script src="script.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="lignt.css" title="light">
+  <link rel="stylesheet" href="./dark.css" title="dark" disabled>
+</head>
+<body>
+  <!-- задание 1 -->
+  <div id="div1" onclick="changeRadio(event)">
+    <input type="radio" name="radio" value="yes" id="yes">
+    <label for="yes">Да</label>
+    <input type="radio" name="radio" value="no" id="no">
+    <label for="no">Нет</label>
+  </div>
+  <!-- задание 2 -->
+  <select name="new-list" id="new-list">
+    <option value="ordered">Упорядоченный</option>
+    <option value="unordered">Неупорядоченный</option>
+  </select>
+  <button onclick="createList()">Создать список</button>
+  <div id="listDiv"></div>
+  <!-- задание 3 -->
+  <button onclick="changeStyle()">Изменить стиль</button>
+  <div id="div3">
+    <div id="textDiv">
+      <p>
+        Вокруг людей существует целая куча объединений людей по интересам. 
+        По-моему иметь хобби – это правильно. Нет хобби – есть пустота. 
+        А пустота всегда стремиться быть заполненной. Причем заполненной всякими ненужными, 
+        а иногда и вредными вещами.
+      </p>
+      <p>
+        Хобби бывают разные. Есть хобби, в основе которых лежит коллекционирование. 
+        Собирать можно все: марки, редкие монеты , зажигалки, фигурки каких-нибудь персонажей. 
+        Коллекционирование очень полезное занятие. Оно помогает развивать людям память, нестандартное мышление.
+      </p>
+      <p>
+        Есть хобби, смысл которых сводится к изготовлению чего либо. 
+        Изготовлять можно все что угодно. Важно иметь под рукой необходимые материалы. 
+        Можно изготовлять предметы быта и украшения из дерева или из других материалов. 
+        Также можно изготовлять модели, например: модель самолета или машины.
+      </p>
+      <p>
+        Ещё одна разновидность хобби связана с разнообразной физической и умственной активностью. 
+        Рыбалка, собирание грибов, охота, гонки на воздушных шарах – занятия такого вида хобби. 
+      </p>
+      <p>
+        Я думаю, что хобби помогает людям многому научиться. Терпению, усердию, умению мастерить.
+        Умению общаться с другими людьми. Поэтому я думаю, что хобби должен иметь каждый.
+      </p>
+      <p>
+        Но у меня нет хобби, я ленивец)
+      </p>
+    </div>
+    <div id="divImg">
+      <img src="img/img2.jpg" alt="img2">
+      <img src="img/img3.jpg" alt="img3">
+      <img src="img/img4.jpg" alt="img4">
+      <img src="img/img5.jpg" alt="img5">
+    </div>
+  </div>
+</body>
+</html>

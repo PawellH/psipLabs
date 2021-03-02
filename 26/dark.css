@@ -1,0 +1,8 @@
+body{
+  background-color: black;
+}
+#textDiv {
+  background-color: #756b6b;
+  color: white;
+  border-color: yellow;
+}
