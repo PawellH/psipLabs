@@ -1,19 +1,11 @@
 //задание 1
-let animationInterval;
-const images = [...document.querySelectorAll("#slider img")];
 function playAnimation() {
   const selectTime = document.querySelector("#selectTime");
+  const images = [...document.querySelectorAll("#slider img")];
+  let animationInterval;
   let iCurrentImg = 1;
   if (!selectTime.value) {
     return;
-  }
-  if (animationInterval) {
-    clearInterval(animationInterval); 
-    animationInterval = null;
-    images.forEach(image => {
-      image.style.opacity = "";
-    });
-    currentImageIngex = 1;
   }
   animationInterval = setInterval(() => {
     const iPrev = (iCurrentImg  - 1) % images.length;
@@ -26,21 +18,9 @@ function playAnimation() {
   }, selectTime.value * 1000);
 }
 
-function resetAnimation() {
-  if (animationInterval) {
-    clearInterval(animationInterval); 
-    animationInterval = null;
-    images.forEach(image => {
-      image.style.opacity = "";
-    });
-    currentImageIngex = 1;
-  }
-}
-
 //задание 2
-let displaySubmenu = false; 
-window.onload = function(){
-  //2.1
+//2.1
+function animation_burger() {
   const menuBtn = document.querySelector(".menu-btn");
   menuBtn.addEventListener('mouseover', () => {
     menuBtn.style.border= "3px solid black";
@@ -49,8 +29,11 @@ window.onload = function(){
   menuBtn.addEventListener('mouseout', () => {
     menuBtn.style.border= "";
     menuBtn.classList.remove('open');
-  }); 
-  //2.2
+  });
+}
+window.requestAnimationFrame(animation_burger);
+//2.2
+function animation_menuLvls() {
   const menuItems = document.querySelectorAll(".topmenu > li");
   menuItems.forEach(menuItem => {
     const submenu = menuItem.querySelector(".submenu");
@@ -62,3 +45,4 @@ window.onload = function(){
     })
   });
 }
+window.requestAnimationFrame(animation_menuLvls);
