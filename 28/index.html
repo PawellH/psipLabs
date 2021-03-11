@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lab 28</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+</head>
+<body>
+  <div id="div1">
+    <figure id="slider">
+      <div id="images">
+        <img src="./img1.png">
+        <img src="./img2.png">
+        <img src="./img3.png">
+        <img src="./img4.png">
+        <img src="./img5.jpg">
+      </div>
+      <figcaption>Adventure Dogi</figcaption>
+    </figure>
+    <select name="select" id="selectTime">
+      <option value="" disabled selected>время анимации</option>
+      <option value="3">3</option>
+      <option value="5">5</option>
+      <option value="10">10</option>
+    </select>
+    <button onclick="playAnimation()">play</button>
+    <button onclick="resetAnimation()">reset</button>       
+  </div>
+  <br>
+  <div class="menu-btn">
+    <div class="menu-btn__burger"></div>
+  </div>
+  <br>
+  <div>
+    <nav>
+      <ul class="topmenu">
+        <li>
+          <a class="active">menu 1</a>
+          <ul class="submenu">
+            <li><a>menu 1 lvl2</a></li>
+            <li><a>menu 1 lvl2</a></li>
+          </ul>
+        </li>
+        <li><a class="active">menu 2</a>
+          <ul class="submenu">
+            <li><a>menu 2 lvl2</a></li>
+            <li><a>menu 2 lvl2</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</body>
+</html>
